@@ -10,6 +10,6 @@ with DAG(
         tags=["test"],
 ) as dag:
     start = EmptyOperator(task_id="start_task")
-    task_1 = EmptyOperator(task_id="taks-1")
+    task_1 = EmptyOperator(task_id="task-1")
     end = EmptyOperator(task_id="end_task")
     start >> task_1 >> end
