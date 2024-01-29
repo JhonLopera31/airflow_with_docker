@@ -4,8 +4,8 @@ from airflow.decorators import dag
 from airflow.operators.empty import EmptyOperator
 # modules must be imported assuming that dags is the parent folder this to be recognized by airflow
 from test_etl.extractor import data_extractor
-from test_etl.transformer import data_transformer
 from test_etl.loader import data_loader
+from test_etl.transformer import data_transformer
 
 # Define the default_args dictionary to specify the default parameters of the DAG
 default_args = {

@@ -3,7 +3,6 @@ from datetime import datetime
 from airflow import DAG
 from airflow.operators.empty import EmptyOperator
 
-
 dag_parameters = {
     "dag_id": "my_first_dummy_dag",
     "start_date": datetime(2024, 1, 1),
@@ -13,7 +12,6 @@ dag_parameters = {
 }
 
 with DAG(**dag_parameters) as dag:
-
     # 1. define task
     start_task = EmptyOperator(task_id="start_task")
     some_task = EmptyOperator(task_id="some_task")
