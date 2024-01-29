@@ -12,11 +12,11 @@ def data_transformer(raw_data: list) -> pd.DataFrame:
 
     columns_to_exclude = ["email", "website"]
 
-    logging.debug("- Normalizing json data")
+    logging.info("- Normalizing json data")
     transformed_data = pd.DataFrame.from_records(raw_data)
     print(transformed_data.to_string())
 
-    logging.debug("- Formatting string-type data")
+    logging.info("- Formatting string-type data")
     column_to_format = list(set(transformed_data.columns) - set(columns_to_exclude))
     transformed_data [column_to_format] = transformed_data[column_to_format].applymap(text_formatter_1.format_object)
     transformed_data [column_to_format] = transformed_data[column_to_format].applymap(text_formatter_2.format_object)

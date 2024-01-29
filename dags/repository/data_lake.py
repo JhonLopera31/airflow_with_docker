@@ -28,7 +28,7 @@ def _format_date(day: Optional[str] = None, month: Optional[str] = None, year: O
     return "_".join([x for x in [day, month, year] if x])
 
 
-def save_dataframe(  # noqa - All these arguments are requiered according to the naming convention.
+def save_dataframe_in_s3_bucket(  # noqa - All these arguments are requiered according to the naming convention.
         data: pd.DataFrame,
         resource_group: str,
         resource_name: str,

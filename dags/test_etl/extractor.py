@@ -23,7 +23,7 @@ def data_extractor() -> list:
     :raise raise InvalidRequestException:
     """
     try:
-        logging.debug(f"Extracting data from {ENDPOINT}")
+        logging.info(f"Extracting data from {ENDPOINT}")
         response = requests.get(ENDPOINT)
         response.raise_for_status()  # Check if the request was successful (status code 2xx)
         return response.json()
